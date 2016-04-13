@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Site</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="content_container">
+				<div id="form_setup" class="panel panel-default">
+					<div class="panel-heading">
+						<h1>Login / Sign up</h1>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-sm-6 text-center">
+								<a id="loginbtn" class="btn btn-primary" >Login</a>
+							</div>
+							<div class="col-sm-6 text-center">						
+								<a id="signupbtn" class="btn btn-default">Sign Up</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Login form -->
+				<div id="login_form" class="panel panel-default" style="display:none">
+					<div class="panel-heading">
+						<h1>Login</h1>
+					</div>
+					<div class="panel-body">
+					<form id="login">
+						<div class="form-group">
+							<label for="username">Username</label>
+							<input class="form-control" required="required" type="email" id="email" name="email" placeholder="Email" value="">
+						</div>
+						<div class="form-group">
+							<label for="username">Password</label>
+							<input class="form-control" required="required" type="password" name="password" placeholder="Password" value="">
+						</div>
+						<div class="form-group">
+							<a onclick="signIn()" class="btn btn-primary pull-right">Login</a>
+							<a class="go_back btn btn-default pull-left" onclick="returnBack(this)">Back</a>
+						</div>
+					</form>
+					</div>
+				</div>
+
+				<!-- Sign up form -->
+				<div id="signup_form" class="panel panel-default" style="display:none">
+					<div class="panel-heading">
+						<h1>Sign-up</h1>
+					</div>
+					<div class="panel-body">
+						<form id="submit">
+							<div class="form-group">
+								<label for="username">Name</label>
+								<input class="form-control" required="required" type="text" id="fname" name="fname" placeholder="Name">
+							</div>
+							<div class="form-group">
+								<label for="username">Email</label>
+								<input class="form-control" required="required" type="email" id="email" name="email" placeholder="Email">
+							</div>
+							<div class="form-group">
+								<label for="username">Password</label>
+								<input class="form-control" required="required" type="password" name="password" placeholder="Password">
+							</div>
+							<div class="form-group">
+								<a onclick="signUp()" class="btn btn-primary pull-right">Submit</a>
+								<a class="btn btn-default pull-left" onclick="returnBack(this)">Back</a>
+							</div>
+						</form>
+					</div>
+				</div>
+
+				<!-- welcome screen -->
+				<div id="welcome" class="row" style="display:none">
+					<h1>Welcome <span></span></h1>
+					<a id="logout" class="btn btn-primary pull-right">Logout</a>
+				</div>
+			</div>
+		</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" ></script>
+	<script src="site.js"></script>
+	</body>
+
+</html>	
